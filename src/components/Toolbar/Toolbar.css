@@ -38,6 +38,7 @@
   }
   
   .toolbar-logo a {
+    white-space: nowrap;
     letter-spacing: -0.9px;
     font-family: ibm plex sans, sans-serif;
     font-weight: 700;
@@ -71,21 +72,25 @@
     display: block;
     color: #585858;
     text-decoration: none;
-    padding: 10px 16px;
+    /* padding: 10px 16px; */
+    padding-left: 4%;
     border: none;
     font-size: 14px;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+
   }
   
   .toolbar-nav-items a:hover,
   .toolbar-nav-items a:active,
   .toolbar .toolbar-nav .toolbar-nav-items .dropdown button:hover,
   .toolbar .toolbar-nav .toolbar-nav-items .dropdown button:active {
-    color: #585858;
+    /* color: #585858;
     text-decoration: none;
     background-color: #e6e6e6;
     border: none ;
-  border-radius: 2px;
+  border-radius: 2px; */
+  color: black;
   
   }
   

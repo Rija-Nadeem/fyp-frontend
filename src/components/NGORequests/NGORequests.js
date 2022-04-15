@@ -3,6 +3,7 @@ import Footer from '../Footer/Footer';
 import Toolbar from '../Toolbar/Toolbar';
 import SideDrawer from "../SideDrawer/SideDrawer";
 import BackDrop from "../BackDrop/BackDrop";
+import dummy from '../../images/grayscale-kid.jpg'
 import './NGORequests.css';
 import axios from 'axios';
 // import ProceedOrderModal from '../Modal/ProceedOrderModal';
@@ -122,7 +123,7 @@ class NGORequests extends React.Component {
                             <li><a
                             style={{backgroundColor: this.state.selectedNgo===''?'#579df8':'#4a89dc'}}
                             onClick={()=>{this.setState({selectedNgo:''},()=>this.filteredContent())}}>All</a></li>
-                            {this.state.ngoList.map((ngo)=>{
+                            {/* {this.state.ngoList.map((ngo)=>{
                                 return(
                  
                                     <li><a
@@ -133,13 +134,14 @@ class NGORequests extends React.Component {
                                     }
                                     }>{ngo.name}</a></li>
                                 );
-                            })}
-                            {/* <li><a href="/">Human Rights Organization </a></li>
-                            <li><a href="/">Helping Hands</a></li>
-                            <li><a href="/">Justice For You</a></li>
-                            <li><a href="/">Little Care</a></li>
-                            <li><a href="/">Speak For Change</a></li>
-                            <li><a href="/">We Work Together</a></li> */}
+                            })} */}
+
+                            <li><a >Human Rights Organization </a></li>
+                            <li><a >Helping Hands</a></li>
+                            <li><a >Justice For You</a></li>
+                            <li><a >Little Care</a></li>
+                            <li><a >Speak For Change</a></li>
+                            <li><a >We Work Together</a></li>
                             
                         </ul>
                         <h2 className="filter-heading">Filter By Category:</h2>
@@ -183,13 +185,49 @@ class NGORequests extends React.Component {
                                 />
                             );
                         })}
-                        {/* <RequestCard org="Helping Hands" category="Clothes" 
-                        body="Eastern wear women clothes that are barely used and are in good condition." 
-                        />
-                        <RequestCard org="We Work Together" category="Books" 
-                        body=""
-                        />
-                        <RequestCard org="Little Care" category="Toys" /> */}
+                        <RequestCard
+                                image={dummy}
+                                title={'Title'}
+                                reqId={1}
+                                ngoname={'NGO Name'}
+                                des={'Descrption here...'}
+                                date={'12 March 2021'}
+                                />
+                        {/* <div style={{display:'flex',  flexWrap:'wrap'}}>
+
+                         <RequestCard
+                                image={dummy}
+                                title={'Title'}
+                                reqId={1}
+                                ngoname={'NGO Name'}
+                                des={'Descrption here...'}
+                                date={'12 March 2021'}
+                                />
+                                 <RequestCard
+                                image={dummy}
+                                title={'Title'}
+                                reqId={1}
+                                ngoname={'NGO Name'}
+                                des={'Descrption here...'}
+                                date={'12 March 2021'}
+                                />
+                                 <RequestCard
+                                image={dummy}
+                                title={'Title'}
+                                reqId={1}
+                                ngoname={'NGO Name'}
+                                des={'Descrption here...'}
+                                date={'12 March 2021'}
+                                />
+                                 <RequestCard
+                                image={dummy}
+                                title={'Title'}
+                                reqId={1}
+                                ngoname={'NGO Name'}
+                                des={'Descrption here...'}
+                                date={'12 March 2021'}
+                                />
+                        </div> */}
                        
                     </div>
                 </div>

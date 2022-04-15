@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Navigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import {Link} from 'react-router-dom';
 
@@ -102,8 +102,8 @@ else if (id==='6'){
 
     render(){
       if (this.state.userClick === true) {
-        // return <Navigate to={this.state.goto} /> 
-        return <Navigate to={this.state.goto} push/>
+        // return <Redirect to={this.state.goto} /> 
+        return <Redirect to={this.state.goto} push/>
     }
         return(
 

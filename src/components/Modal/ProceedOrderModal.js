@@ -34,7 +34,7 @@ class ProceedOrderModal extends Component{
         return(
             <Modal
       {...this.props}
-      size="lg"
+      // size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >

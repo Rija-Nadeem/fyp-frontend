@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 // import history from "./history";
 import history from './assets/history';
 import MainPage from './components/MainPage/MainPage';
@@ -28,29 +28,29 @@ import NGOStatusRejected from './components/NGOStatusRejected/NGOStatusRejected'
 import AdminPanelStatistics from './components/AdminPanelStatistics/AdminPanelStatistics';
 
 
-const App=()=>{
+const App=()=>{ 
     return(
-        <Router history={history}>
-        <Routes>
-           <Route path="/" exact element={<MainPage/>}/>
-           <Route path="/viewStory" exact element={<ViewStory/>}/>
-           <Route path="/signup" exact element={<Signup/>}/>
-           <Route path="/aboutUs" element={<AboutUs/>}/>
-           <Route path="/login" element={<LoginForm/>}/>
-           <Route path="/help" element={<Help/>}/>
-           <Route path="/donationForm" element={<DonationForm/>}/>
-           <Route path="/adminPanelStatistics" element={<AdminPanelStatistics/>} />
-           <Route path="/profile" element={<Profile/>}/>
-           <Route path="/ngoRequests" element={<NGORequests/>}/>
-           <Route path="/googleMap" element={<GoogleMap/>}/>
-           <Route path="/adminPanelMain" element={<AdminPanel/>}/>
-           <Route path="/adminPanelDonorRequests" element={<AdminPanelDonorRequests/>}/>
-           <Route path="/adminPanelNGORequests" element={<AdminPanelNGORequests/>}/>
-           <Route path="/adminPanelNGORecords" element={<AdminPanelNGORecords/>}/>
-           <Route path="/adminPanelNGOJoin" element={<AdminPanelNGOJoin/>}/>
-           <Route path="/adminPanelUserFeedback" element={<AdminPanelUserFeedback/>}/>
-           <Route path="/ngostatuspending" element={<NGOStatusPending/>}/>
-           <Route path="/ngostatusrejected" element={<NGOStatusRejected/>}/>
+        <Router>
+        <Switch>
+           <Route path="/" exact component={MainPage}/>
+           <Route path="/viewStory" exact component={ViewStory}/>
+           <Route path="/signup" exact component={Signup}/>
+           <Route path="/aboutUs" component={AboutUs}/>
+           <Route path="/login" component={LoginForm}/>
+           <Route path="/help" component={Help}/>
+           <Route path="/donationForm" component={DonationForm}/>
+           <Route path="/adminPanelStatistics" component={AdminPanelStatistics} />
+           <Route path="/profile" component={Profile}/>
+           <Route path="/ngoRequests" component={NGORequests}/>
+           <Route path="/googleMap" component={GoogleMap}/>
+           <Route path="/adminPanelMain" component={AdminPanel}/>
+           <Route path="/adminPanelDonorRequests" component={AdminPanelDonorRequests}/>
+           <Route path="/adminPanelNGORequests" component={AdminPanelNGORequests}/>
+           <Route path="/adminPanelNGORecords" component={AdminPanelNGORecords}/>
+           <Route path="/adminPanelNGOJoin" component={AdminPanelNGOJoin}/>
+           <Route path="/adminPanelUserFeedback" component={AdminPanelUserFeedback}/>
+           <Route path="/ngostatuspending" component={NGOStatusPending}/>
+           <Route path="/ngostatusrejected" component={NGOStatusRejected}/>
 
            <Route path="/manage-donations"
                 component={() => <ManageDonations  
@@ -82,7 +82,7 @@ const App=()=>{
                                   />}/>
             
 
-       </Routes>
+       </Switch>
        </Router>
     );
 };
